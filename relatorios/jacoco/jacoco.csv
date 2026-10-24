@@ -1,0 +1,8 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+,com.uniamerica.sgidebrito.controller,UsuarioController,0,39,0,0,0,9,0,6,0,6
+,com.uniamerica.sgidebrito.controller,FuncionarioController,0,39,0,0,0,9,0,6,0,6
+,com.uniamerica.sgidebrito.controller,ClienteController,0,39,0,0,0,9,0,6,0,6
+,com.uniamerica.sgidebrito.service,ClienteService,0,68,0,0,0,17,0,7,0,7
+,com.uniamerica.sgidebrito.service,FuncionarioService,0,76,0,0,0,19,0,7,0,7
+,com.uniamerica.sgidebrito.service,UsuarioService,0,64,0,0,0,16,0,7,0,7
+,com.uniamerica.sgidebrito,SgidebritoApplication,5,3,0,0,2,1,1,1,1,1
