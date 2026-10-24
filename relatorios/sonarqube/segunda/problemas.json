@@ -1,0 +1,317 @@
+{
+  "total": 6,
+  "p": 1,
+  "ps": 500,
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 500,
+    "total": 6
+  },
+  "effortTotal": 60,
+  "issues": [
+    {
+      "key": "bae70294-993d-4b91-b6d9-bb09f2d30826",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "sgidebrito:src/main/java/com/uniamerica/sgidebrito/controller/ClienteController.java",
+      "project": "sgidebrito",
+      "line": 35,
+      "hash": "06e830c3c4e4a77026bd6c66268dcae8",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 63,
+        "endOffset": 68
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-10-23T23:58:41-03:00",
+      "updateDate": "2026-10-23T23:58:41-03:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "c4ed804b-1d24-439a-8bc2-6e50a1b7285f",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "sgidebrito:src/main/java/com/uniamerica/sgidebrito/controller/ClienteController.java",
+      "project": "sgidebrito",
+      "line": 40,
+      "hash": "9c713bba4f35ffac75da7a014c911eb6",
+      "textRange": {
+        "startLine": 40,
+        "endLine": 40,
+        "startOffset": 89,
+        "endOffset": 94
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-10-23T23:58:41-03:00",
+      "updateDate": "2026-10-23T23:58:41-03:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "25d56feb-4662-4bac-bc80-1aa47e251c57",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "sgidebrito:src/main/java/com/uniamerica/sgidebrito/controller/FuncionarioController.java",
+      "project": "sgidebrito",
+      "line": 35,
+      "hash": "efa94d7c7463fe40ef7f42f5469a8e0d",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 71,
+        "endOffset": 76
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-10-23T23:58:41-03:00",
+      "updateDate": "2026-10-23T23:58:41-03:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "4e1c30de-ab02-4912-913c-9d07ec4cd09c",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "sgidebrito:src/main/java/com/uniamerica/sgidebrito/controller/FuncionarioController.java",
+      "project": "sgidebrito",
+      "line": 40,
+      "hash": "b155a3a8b29f912784a1894a38c08310",
+      "textRange": {
+        "startLine": 40,
+        "endLine": 40,
+        "startOffset": 97,
+        "endOffset": 102
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-10-23T23:58:41-03:00",
+      "updateDate": "2026-10-23T23:58:41-03:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "6988caeb-ed91-4877-a0ff-543e11f74d51",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "sgidebrito:src/main/java/com/uniamerica/sgidebrito/controller/UsuarioController.java",
+      "project": "sgidebrito",
+      "line": 35,
+      "hash": "89b00ce552024cb9e5b47373c0a80a00",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 63,
+        "endOffset": 68
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-10-23T23:58:41-03:00",
+      "updateDate": "2026-10-23T23:58:41-03:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "cdef9f11-0863-46f6-a728-c636ecd3adc8",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "sgidebrito:src/main/java/com/uniamerica/sgidebrito/controller/UsuarioController.java",
+      "project": "sgidebrito",
+      "line": 40,
+      "hash": "c1dc3d8bdc1e450e9d6769d66235bdf8",
+      "textRange": {
+        "startLine": 40,
+        "endLine": 40,
+        "startOffset": 89,
+        "endOffset": 94
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-10-23T23:58:41-03:00",
+      "updateDate": "2026-10-23T23:58:41-03:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    }
+  ],
+  "components": [
+    {
+      "key": "sgidebrito:src/main/java/com/uniamerica/sgidebrito/controller/UsuarioController.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "UsuarioController.java",
+      "longName": "src/main/java/com/uniamerica/sgidebrito/controller/UsuarioController.java",
+      "path": "src/main/java/com/uniamerica/sgidebrito/controller/UsuarioController.java"
+    },
+    {
+      "key": "sgidebrito",
+      "enabled": true,
+      "qualifier": "TRK",
+      "name": "SGI-Debrito",
+      "longName": "SGI-Debrito"
+    },
+    {
+      "key": "sgidebrito:src/main/java/com/uniamerica/sgidebrito/controller/FuncionarioController.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "FuncionarioController.java",
+      "longName": "src/main/java/com/uniamerica/sgidebrito/controller/FuncionarioController.java",
+      "path": "src/main/java/com/uniamerica/sgidebrito/controller/FuncionarioController.java"
+    },
+    {
+      "key": "sgidebrito:src/main/java/com/uniamerica/sgidebrito/controller/ClienteController.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "ClienteController.java",
+      "longName": "src/main/java/com/uniamerica/sgidebrito/controller/ClienteController.java",
+      "path": "src/main/java/com/uniamerica/sgidebrito/controller/ClienteController.java"
+    }
+  ],
+  "facets": []
+}
