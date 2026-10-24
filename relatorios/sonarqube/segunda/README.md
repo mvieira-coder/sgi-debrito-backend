@@ -1,25 +1,25 @@
 # Relatório 2 - SonarQube
 
-Projeto: SGI-Debrito. Análise realizada em 24/10/2026, após as correções.
+Projeto: SGI-Debrito. Análise final realizada em 24/10/2026, reexecutada após a inclusão dos DTOs.
 
-| Resultado | Antes | Depois |
+| Resultado | Primeira análise | Após as correções |
 |---|---:|---:|
 | Bugs | 0 | 0 |
 | Problemas de manutenção (code smells) | 6 | 0 |
-| Vulnerabilidades apontadas | 6 | 6 |
+| Vulnerabilidades apontadas | 6 | 0 |
 | Duplicação de código | 0% | 0% |
-| Cobertura de linhas | 97,1% | 97,6% |
+| Cobertura de linhas | 97,1% | 98,1% |
 
-## Correção realizada
+## Correções realizadas
 
-Nos três controllers e nos três services, as dependências passaram a ser recebidas pelo construtor. O @Autowired foi mantido no construtor. Com isso, os 6 problemas de manutenção foram resolvidos.
+**Dependências pelo construtor:** nos três controllers e nos três services, o @Autowired passou dos campos para os construtores. Isso resolveu os 6 problemas de manutenção.
 
-Após a alteração, os 46 testes passaram sem erros. A cobertura ficou em 97,6%, considerando também as linhas adicionadas nos construtores.
+**DTOs nos endpoints:** foram criados ClienteDto, FuncionarioDto e UsuarioDto para receber os dados de cadastro e atualização. Eles contêm somente os campos desses cadastros, sem o ID, e convertem os dados para as entidades. Os métodos POST e PUT deixaram de receber entidades diretamente, resolvendo os 6 alertas de vulnerabilidade.
 
-## Pendências
+## Resultado
 
-Os 6 alertas sobre receber entidades diretamente nos métodos POST e PUT continuam. A sugestão de usar DTOs não foi aplicada porque o projeto foi mantido como CRUD simples, sem DTOs. Portanto, esses alertas não foram resolvidos.
+Os 49 testes passaram sem erros. Foram acrescentados testes para confirmar que um ID enviado no corpo da requisição não muda a identidade do registro. Os campos de cadastro e atualização também foram conferidos.
 
-O Quality Gate ficou OK para o código novo, mas os 6 alertas anteriores permanecem no resultado geral.
+O Quality Gate ficou aprovado. Não restaram apontamentos abertos nesta análise do SonarQube.
 
-Os arquivos JSON desta pasta contêm os resultados exportados do SonarQube.
+Os arquivos JSON desta pasta contêm os resultados exportados da análise final.

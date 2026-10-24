@@ -15,6 +15,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -73,6 +74,7 @@ class CrudIntegrationTest {
         // Cadastra e guarda o ID retornado pelo backend.
         String resposta = mvc.perform(post(url).contentType(MediaType.APPLICATION_JSON).content(dados(modulo, "Teste")))
                 .andExpect(status().isCreated()).andExpect(jsonPath("$.id").isNumber())
+                .andExpect(content().json(dados(modulo, "Teste")))
                 .andReturn().getResponse().getContentAsString();
         Number id = JsonPath.read(resposta, "$.id");
 
@@ -83,7 +85,8 @@ class CrudIntegrationTest {
         // Atualiza e confere se a alteracao foi persistida.
         mvc.perform(put(url + "/" + id).contentType(MediaType.APPLICATION_JSON).content(dados(modulo, "Alterado")))
                 .andExpect(status().isOk()).andExpect(jsonPath("$.id").value(id))
-                .andExpect(jsonPath("$." + campo).value("Alterado"));
+                .andExpect(jsonPath("$." + campo).value("Alterado"))
+                .andExpect(content().json(dados(modulo, "Alterado")));
         assertEquals("Alterado", jdbc.queryForObject("select " + campo + " from " + tabela + " where id = ?", String.class, id));
         // Exclui e confirma que o registro deixou de existir.
         mvc.perform(delete(url + "/" + id)).andExpect(status().isNoContent()).andExpect(content().string(""));
@@ -121,5 +124,24 @@ class CrudIntegrationTest {
         mvc.perform(options("/" + modulo).header("Origin", "http://localhost:4200")
                 .header("Access-Control-Request-Method", "POST"))
                 .andExpect(status().isOk()).andExpect(header().string("Access-Control-Allow-Origin", "http://localhost:4200"));
+    }
+    @ParameterizedTest
+    @ValueSource(strings = {"clientes", "funcionarios", "usuarios"})
+    void idEnviadoNoCorpoNaoAlteraIdentidade(String modulo) throws Exception {
+        String url = "/" + modulo;
+        String cadastro = dados(modulo, "Teste").replace("{", "{\"id\":999999,");
+        String resposta = mvc.perform(post(url).contentType(MediaType.APPLICATION_JSON).content(cadastro))
+                .andExpect(status().isCreated())
+                .andExpect(content().json(dados(modulo, "Teste")))
+                .andReturn().getResponse().getContentAsString();
+        Number id = JsonPath.read(resposta, "$.id");
+        assertNotEquals(999999L, id.longValue());
+
+        String alteracao = dados(modulo, "Alterado").replace("{", "{\"id\":888888,");
+        mvc.perform(put(url + "/" + id).contentType(MediaType.APPLICATION_JSON).content(alteracao))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(id))
+                .andExpect(content().json(dados(modulo, "Alterado")));
+        mvc.perform(get(url + "/888888")).andExpect(status().isNotFound());
     }
 }

@@ -1,6 +1,7 @@
 package com.uniamerica.sgidebrito.controller;
 
 import com.uniamerica.sgidebrito.entity.Cliente;
+import com.uniamerica.sgidebrito.dto.ClienteDto;
 import com.uniamerica.sgidebrito.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -32,13 +33,13 @@ public class ClienteController {
     }
 
     @PostMapping
-    public ResponseEntity<Cliente> salvar(@RequestBody Cliente dados) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(service.salvar(dados));
+    public ResponseEntity<Cliente> salvar(@RequestBody ClienteDto dados) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.salvar(dados.toEntity()));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Cliente> atualizar(@PathVariable Long id, @RequestBody Cliente dados) {
-        return ResponseEntity.ok(service.atualizar(id, dados));
+    public ResponseEntity<Cliente> atualizar(@PathVariable Long id, @RequestBody ClienteDto dados) {
+        return ResponseEntity.ok(service.atualizar(id, dados.toEntity()));
     }
 
     @DeleteMapping("/{id}")

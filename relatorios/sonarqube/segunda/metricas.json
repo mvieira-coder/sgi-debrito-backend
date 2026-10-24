@@ -6,7 +6,7 @@
     "measures": [
       {
         "metric": "coverage",
-        "value": "97.6",
+        "value": "98.1",
         "bestValue": false
       },
       {
@@ -26,16 +26,16 @@
       },
       {
         "metric": "ncloc",
-        "value": "332"
+        "value": "397"
       },
       {
         "metric": "vulnerabilities",
-        "value": "6",
-        "bestValue": false
+        "value": "0",
+        "bestValue": true
       },
       {
         "metric": "line_coverage",
-        "value": "97.6",
+        "value": "98.1",
         "bestValue": false
       },
       {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FuncionarioController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report"></a> &gt; <a href="index.source.html" class="el_package">com.uniamerica.sgidebrito.controller</a> &gt; <span class="el_source">FuncionarioController.java</span></div><h1>FuncionarioController.java</h1><pre class="source lang-java linenums">package com.uniamerica.sgidebrito.controller;
 
 import com.uniamerica.sgidebrito.entity.Funcionario;
+import com.uniamerica.sgidebrito.dto.FuncionarioDto;
 import com.uniamerica.sgidebrito.service.FuncionarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,34 +18,34 @@ public class FuncionarioController {
     private final FuncionarioService service;
 
     @Autowired
-<span class="fc" id="L20">    public FuncionarioController(FuncionarioService service) {</span>
-<span class="fc" id="L21">        this.service = service;</span>
-<span class="fc" id="L22">    }</span>
+<span class="fc" id="L21">    public FuncionarioController(FuncionarioService service) {</span>
+<span class="fc" id="L22">        this.service = service;</span>
+<span class="fc" id="L23">    }</span>
 
     @GetMapping
     public ResponseEntity&lt;List&lt;Funcionario&gt;&gt; listarTodos() {
-<span class="fc" id="L26">        return ResponseEntity.ok(service.listarTodos());</span>
+<span class="fc" id="L27">        return ResponseEntity.ok(service.listarTodos());</span>
     }
 
     @GetMapping(&quot;/{id}&quot;)
     public ResponseEntity&lt;Funcionario&gt; buscarPorId(@PathVariable Long id) {
-<span class="fc" id="L31">        return ResponseEntity.ok(service.buscarPorId(id));</span>
+<span class="fc" id="L32">        return ResponseEntity.ok(service.buscarPorId(id));</span>
     }
 
     @PostMapping
-    public ResponseEntity&lt;Funcionario&gt; salvar(@RequestBody Funcionario dados) {
-<span class="fc" id="L36">        return ResponseEntity.status(HttpStatus.CREATED).body(service.salvar(dados));</span>
+    public ResponseEntity&lt;Funcionario&gt; salvar(@RequestBody FuncionarioDto dados) {
+<span class="fc" id="L37">        return ResponseEntity.status(HttpStatus.CREATED).body(service.salvar(dados.toEntity()));</span>
     }
 
     @PutMapping(&quot;/{id}&quot;)
-    public ResponseEntity&lt;Funcionario&gt; atualizar(@PathVariable Long id, @RequestBody Funcionario dados) {
-<span class="fc" id="L41">        return ResponseEntity.ok(service.atualizar(id, dados));</span>
+    public ResponseEntity&lt;Funcionario&gt; atualizar(@PathVariable Long id, @RequestBody FuncionarioDto dados) {
+<span class="fc" id="L42">        return ResponseEntity.ok(service.atualizar(id, dados.toEntity()));</span>
     }
 
     @DeleteMapping(&quot;/{id}&quot;)
     public ResponseEntity&lt;Void&gt; excluir(@PathVariable Long id) {
-<span class="fc" id="L46">        service.excluir(id);</span>
-<span class="fc" id="L47">        return ResponseEntity.noContent().build();</span>
+<span class="fc" id="L47">        service.excluir(id);</span>
+<span class="fc" id="L48">        return ResponseEntity.noContent().build();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

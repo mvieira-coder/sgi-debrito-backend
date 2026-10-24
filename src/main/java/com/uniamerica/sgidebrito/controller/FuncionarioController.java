@@ -1,6 +1,7 @@
 package com.uniamerica.sgidebrito.controller;
 
 import com.uniamerica.sgidebrito.entity.Funcionario;
+import com.uniamerica.sgidebrito.dto.FuncionarioDto;
 import com.uniamerica.sgidebrito.service.FuncionarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -32,13 +33,13 @@ public class FuncionarioController {
     }
 
     @PostMapping
-    public ResponseEntity<Funcionario> salvar(@RequestBody Funcionario dados) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(service.salvar(dados));
+    public ResponseEntity<Funcionario> salvar(@RequestBody FuncionarioDto dados) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.salvar(dados.toEntity()));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Funcionario> atualizar(@PathVariable Long id, @RequestBody Funcionario dados) {
-        return ResponseEntity.ok(service.atualizar(id, dados));
+    public ResponseEntity<Funcionario> atualizar(@PathVariable Long id, @RequestBody FuncionarioDto dados) {
+        return ResponseEntity.ok(service.atualizar(id, dados.toEntity()));
     }
 
     @DeleteMapping("/{id}")

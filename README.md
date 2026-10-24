@@ -4,7 +4,7 @@ Projeto academico de cadastros de uma autoescola, com Spring Boot, Java 17, Mave
 
 ## Escopo
 
-CRUDs de Funcionarios, Clientes e Usuarios. Arquitetura: entity, repository, service e controller.
+CRUDs de Funcionarios, Clientes e Usuarios. Arquitetura: entity, repository, service e controller. A pasta dto contém os três objetos simples usados para receber os dados de cadastro e atualização. Cada DTO copia somente os campos permitidos para a entidade, sem receber o ID.
 O DELETE remove o registro de verdade. O login e simulado no frontend; este backend nao implementa autenticacao nem autorizacao. O campo papel e apenas armazenado.
 
 | Modulo | Rota |
@@ -36,10 +36,10 @@ A API inicia em http://localhost:8080. As tabelas sao criadas/atualizadas pelo J
 .\mvnw.cmd clean verify
 ```
 
-Sao 30 testes unitarios (10 por service), 15 cenarios de integracao e 1 teste de inicializacao.
+Sao 30 testes unitarios (10 por service), 18 cenarios de integracao e 1 teste de inicializacao.
 Os unitarios usam JUnit 5 e Mockito, com @Mock, @InjectMocks, when/thenReturn e verify.
 Os testes de integracao usam MockMvc, contexto Spring real e H2 em memoria, separado do MySQL.
-Os cenarios cobrem CRUD completo, persistencia, exclusao fisica, IDs inexistentes, JSON malformado, ID nao numerico e CORS.
+Os cenarios cobrem CRUD completo, persistencia, exclusao fisica, IDs inexistentes, JSON malformado, ID nao numerico, CORS e tentativa de trocar o ID pelo corpo da requisicao.
 
 O projeto preserva JUnit 5, exigido na atividade. Como o Spring Boot 4.1.1 usa Spring Test com integracao voltada ao JUnit 6, o contexto de integracao e iniciado explicitamente por SpringApplicationBuilder. A logica dos CRUDs continua a mesma.
 
