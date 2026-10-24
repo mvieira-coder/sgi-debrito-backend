@@ -12,8 +12,12 @@ import java.util.List;
 @Service
 public class FuncionarioService {
 
+    private final FuncionarioRepository repository;
+
     @Autowired
-    private FuncionarioRepository repository;
+    public FuncionarioService(FuncionarioRepository repository) {
+        this.repository = repository;
+    }
 
     public List<Funcionario> listarTodos() {
         return repository.findAll();

@@ -1,0 +1,21 @@
+{
+  "task": {
+    "id": "1f97b09a-1bf2-44e1-a391-b9cbbe80e5da",
+    "type": "REPORT",
+    "componentId": "2e2cf998-c582-451f-9f54-f4db06e3ae17",
+    "componentKey": "sgidebrito",
+    "componentName": "SGI-Debrito",
+    "componentQualifier": "TRK",
+    "analysisId": "356c4d0a-826a-48f7-952e-b98bdb1a5df0",
+    "status": "SUCCESS",
+    "submittedAt": "2026-10-23T23:59:02-03:00",
+    "submitterLogin": "admin",
+    "startedAt": "2026-10-23T23:59:02-03:00",
+    "executedAt": "2026-10-23T23:59:36-03:00",
+    "executionTimeMs": 33775,
+    "hasScannerContext": true,
+    "warningCount": 0,
+    "warnings": [],
+    "infoMessages": []
+  }
+}

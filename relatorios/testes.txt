@@ -1,0 +1,6 @@
+Validação após correções do SonarQube e inclusão dos DTOs
+Java 17; Maven verify; JUnit 5; Mockito; H2 em memória.
+30 testes unitários + 18 de integração + 1 de inicialização = 49
+Falhas: 0. Erros: 0. Ignorados: 0.
+BUILD SUCCESS
+JaCoCo: 102/104 linhas = 98,1%.

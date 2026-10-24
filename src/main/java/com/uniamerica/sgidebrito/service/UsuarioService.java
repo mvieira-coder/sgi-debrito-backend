@@ -12,8 +12,12 @@ import java.util.List;
 @Service
 public class UsuarioService {
 
+    private final UsuarioRepository repository;
+
     @Autowired
-    private UsuarioRepository repository;
+    public UsuarioService(UsuarioRepository repository) {
+        this.repository = repository;
+    }
 
     public List<Usuario> listarTodos() {
         return repository.findAll();
