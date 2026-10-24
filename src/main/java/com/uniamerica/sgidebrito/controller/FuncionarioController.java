@@ -14,8 +14,12 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:4200")
 public class FuncionarioController {
 
+    private final FuncionarioService service;
+
     @Autowired
-    private FuncionarioService service;
+    public FuncionarioController(FuncionarioService service) {
+        this.service = service;
+    }
 
     @GetMapping
     public ResponseEntity<List<Funcionario>> listarTodos() {
